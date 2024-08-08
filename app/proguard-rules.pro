@@ -19,16 +19,3 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
-
--keep class your.package.name.model.** { *; }
--keepattributes Signature
--keepattributes *Annotation*
--keep class * implements java.io.Serializable {
-    static final long serialVersionUID;
-    private static final java.io.ObjectStreamField[] serialPersistentFields;
-    private void writeObject(java.io.ObjectOutputStream);
-    private void readObject(java.io.ObjectInputStream);
-    private void readObjectNoData();
-    Object writeReplace();
-    Object readResolve();
-}
