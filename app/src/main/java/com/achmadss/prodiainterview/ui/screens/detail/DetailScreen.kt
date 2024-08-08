@@ -1,4 +1,4 @@
-package com.achmadss.prodiainterview.ui.screens
+package com.achmadss.prodiainterview.ui.screens.detail
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -19,9 +19,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
-import coil.compose.AsyncImage
 import coil.compose.SubcomposeAsyncImage
 import com.achmadss.prodiainterview.R
+import com.achmadss.prodiainterview.ui.common.formatDateTime
+import com.achmadss.prodiainterview.ui.common.rememberResourceBitmapPainter
 
 data class DetailScreen(
     val imageUrl: String,
@@ -33,6 +34,7 @@ data class DetailScreen(
     @Composable
     override fun Content() {
         val summaryText = summary.split(".").firstOrNull()
+        val publishedAtFormatted = publishedAt.formatDateTime()
         Surface {
             Column(modifier = Modifier
                 .fillMaxSize()
@@ -67,12 +69,12 @@ data class DetailScreen(
                 Text(
                     modifier = Modifier
                         .padding(16.dp),
-                    text = publishedAt,
+                    text = publishedAtFormatted,
                     style = MaterialTheme.typography.labelSmall
                 )
                 Text(
                     modifier = Modifier.padding(horizontal = 16.dp),
-                    text = summaryText?.plus(".") ?: "No Description",
+                    text = summaryText?.plus(".") ?: "No Summary",
                     style = MaterialTheme.typography.titleLarge
                 )
 

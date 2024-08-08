@@ -1,4 +1,4 @@
-package com.achmadss.prodiainterview.data
+package com.achmadss.prodiainterview.data.common
 
 object Constants {
 
@@ -6,7 +6,7 @@ object Constants {
     const val BASE_URL = "https://api.spaceflightnewsapi.net/v4/"
 
     object SharedPrefKeys {
-        const val TEST = "test"
+        const val RECENT_SEARCHES = "RECENT_SEARCHES"
     }
 
 }

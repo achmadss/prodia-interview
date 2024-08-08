@@ -1,4 +1,4 @@
-package com.achmadss.prodiainterview.data
+package com.achmadss.prodiainterview.data.common
 
 import androidx.annotation.Keep
 import com.google.gson.Gson
