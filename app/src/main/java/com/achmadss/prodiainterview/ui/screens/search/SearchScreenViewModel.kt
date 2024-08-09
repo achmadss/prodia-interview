@@ -9,22 +9,18 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
 import com.achmadss.prodiainterview.data.common.Constants
-import com.achmadss.prodiainterview.data.common.asFlow
 import com.achmadss.prodiainterview.data.common.get
 import com.achmadss.prodiainterview.data.common.put
-import com.achmadss.prodiainterview.data.models.Article
 import com.achmadss.prodiainterview.data.services.ArticleService
 import com.achmadss.prodiainterview.ui.screens.paging.ArticlePagingSource
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
-import kotlinx.coroutines.launch
 
 @OptIn(FlowPreview::class, ExperimentalCoroutinesApi::class)
 class SearchScreenViewModel(

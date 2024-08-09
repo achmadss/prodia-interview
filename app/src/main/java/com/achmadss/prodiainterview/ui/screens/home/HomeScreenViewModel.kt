@@ -8,11 +8,9 @@ import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
 import com.achmadss.prodiainterview.data.common.APICallResult
 import com.achmadss.prodiainterview.data.services.ArticleService
-import com.achmadss.prodiainterview.data.models.Article
 import com.achmadss.prodiainterview.data.common.safeAPICall
 import com.achmadss.prodiainterview.ui.screens.paging.ArticlePagingSource
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.flatMapLatest
